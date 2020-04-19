@@ -1,0 +1,38 @@
+/* CSS reset */
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+input{
+	border:1px solid #b0b0b0;
+}
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+
+caption,th {
+	text-align:left;
+}
+
+q:before,q:after {
+	content:'';
+}
+
+
+
+.button-wrapper{
+	width: 388px;
+	
+   
+}
+.button-wrapper-large{
+	width:500px;
+	
+    padding: 20px 0;
+	height: 80px;
+}

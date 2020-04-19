@@ -1,0 +1,969 @@
+/* ================================
+    CSS STYLES FOR THE PORTAL STATER KIT
+    v1.0, 10/2002
+   ================================
+*/   
+
+body {
+	background-image:url(images/bGround.png); background-repeat: repeat; background-color:#ffffff; color:#000000;
+	font-family:verdana,tahoma,tahoma,arial; font-size:8pt; font-weight:normal;
+	margin-top:0px;margin-left:0px;margin-right:0px;margin-bottom:1px; 
+	
+}
+/*
+body a {
+	color:#3cb371;text-decoration:none; cursor: hand;font-family: Verdana, Tahoma, Arial; 
+}
+
+body a:hover {
+	color:#cc0000;text-decoration:none;cursor: hand; 
+}
+
+body a.link:hover {
+	color:#cc0000;cursor:hand;text-decoration:underline;
+}*/
+	
+table {
+	font-family:verdana, tahoma, arial;font-size:8pt;font-weight:normal;
+}
+
+.MainTbBg
+{
+	background-color: White; border-left-width:thin; border-left-color: Orange; border-left-style:groove; border-right-color:Orange; border-right-width:thin; border-right-style:groove;  border-bottom-color:Orange; border-bottom-width:thin; border-bottom-style:groove;
+	}
+	
+.HeadBg {
+    background-color: Lime; height:80px; 
+}
+
+lnkBut
+{
+	background-color:Transparent; font-family:Trebuchet MS, Tw Cen MT, Verdana; font-size:9pt;
+	}
+	
+lnkBut:link
+{
+	 color:#666600; text-decoration:none; cursor: hand; 
+	
+	}
+lnkBut a:hover
+{
+	 color:#999966; text-decoration:underlined; cursor: hand; 
+	
+	}
+
+lnkBut:hover
+{
+	 color:#999966; text-decoration:underlined; cursor: hand; 
+	
+	}
+	
+.Header
+{
+	 BACKGROUND: url('Images/Master/HeaderBG2.png') no-repeat left top; HEIGHT: 85px; /*background-image:url(images/header2.png); background-repeat: no-repeat;*/
+	}
+	
+	
+.blacknav 
+{	
+	border-right-color: #00ff33;
+	border-right-style: groove;
+	border-right-width: thin;
+	border-top-color: #00ff33;
+	border-top-style: groove;
+	border-top-width: thin;
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 10px;
+	PADDING-BOTTOM: 2px;
+	border-left-color: Black;
+	border-left-style:groove;
+	border-left-width:thin;
+	font-family: Garamond, Verdana, Helvetica, sans-serif;
+	COLOR: white; 
+	HEIGHT: 20px; 
+	BACKGROUND-COLOR: transparent;
+	TEXT-ALIGN: center;
+}
+	
+A.m_item:link {
+	COLOR: white; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none
+}
+A.m_item:visited {
+	COLOR: white; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none
+}
+A.m_item:active {
+	COLOR: White; BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline
+}
+A.m_item:hover {
+	COLOR: white; BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline
+}
+	
+	
+	
+.subblacknav 
+{	
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 11px;
+	PADDING-BOTTOM: 2px;
+	color:  Yellow;
+	HEIGHT: 20px; 
+	font-family: Garamond, Verdana, Helvetica, sans-serif;
+	BACKGROUND-COLOR: transparent;
+	TEXT-ALIGN: center;
+}	
+	
+A.subm_item:link {
+	color:  Yellow; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none
+}
+A.subm_item:visited {
+	COLOR:  Yellow ; BACKGROUND-COLOR: transparent; TEXT-DECORATION: none
+}
+A.subm_item:active {
+	COLOR: Black; BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline
+}
+A.subm_item:hover {
+	COLOR: Black; BACKGROUND-COLOR: transparent; TEXT-DECORATION: underline
+}	
+	
+/* PAGE BANNER */
+/* NOTE: Site Title, Site Links and Tabs are rendered by MobilePortalBanner.ascx
+/* style for the text of the site title */
+.SiteTitle {
+    font-family: Verdana Bold, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color:#000000;
+}
+
+/* background/border colors for the selected tab */
+.TabBg 
+{
+	/*background-image:url(images/subTab2.gif); background-repeat:repeat-x;*/
+	background-color: #669900;
+    height:20px;
+  }
+
+/* background/border colors for the unselected tabs */
+.OtherTabsBg {
+     background-image:url(images/lnkbutdown.gif);
+    height:20px; 
+  }
+
+/* text style for the selected tab */
+.SelectedTab 
+{
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 11px;
+	PADDING-BOTTOM: 2px;
+	COLOR: Yellow; 
+	HEIGHT: 20px; 
+	BACKGROUND-COLOR: transparent;
+	TEXT-ALIGN: center;
+    font-family: Verdana, Helvetica, sans-serif;
+    BORDER-LEFT-STYLE: none; 
+    border-right-style: none;
+    vertical-align:middle;
+    
+}
+
+/* text style for the unselected tabs */
+.OtherTabs {
+    font-family: Tw Cen MT, Tahoma, Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration:none;
+    font-weight: bold; vertical-align:top; 
+    BORDER-RIGHT: #ffffff 1px solid; height:20px; BACKGROUND-COLOR: transparent; TEXT-ALIGN: center; padding-right:4px;
+    
+}
+
+/* hyperlink styles of the unselected tabs */
+A.OtherTabs:link    {
+    text-decoration:    none;
+    color:#ffffff;
+}
+
+A.OtherTabs:visited {
+    text-decoration:    none;
+    color:#ffffff;
+}
+
+A.OtherTabs:active  {
+    text-decoration:    none;
+    color:#ffffff; 
+}
+
+A.OtherTabs:hover   {
+    text-decoration:    none;
+    color:white;
+}
+   
+/*Sub Tab Styles*/
+.subTabBG 
+{
+	 /*background-image:url(images/subTab2.gif); background-repeat:repeat;*/
+	 background-color: #999966; 
+	 border-top-color: ActiveBorder;
+	 border-top-style:outset;
+	 border-top-width: thick;
+     height:15px;
+	}
+	
+   /* text style for the unselected tabs */
+.subTabs {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 9px;
+    color:  ThreeDShadow;
+    text-decoration:none;
+    font-weight: bold; vertical-align:top;
+}
+
+.selectSubTabs {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 10px; 
+    color:   White;
+    text-decoration: underline;
+    BACKGROUND-COLOR: transparent;
+    font-weight: bold; vertical-align:top;
+}
+
+
+/* hyperlink styles of the unselected tabs */
+A.subTabs:link    {
+    text-decoration:    none;
+    color:#000000;
+}
+
+A.subTabs:visited {
+    text-decoration:    none;
+    color:#ffffff;
+}
+
+A.subTabs:active  {
+    text-decoration:    none;
+    color:#ffffff;
+}
+
+A.subTabs:hover   {
+    text-decoration:    none;
+    color:white;
+}
+   /*Sub Tab Styles*/
+   
+   .SiteLinkx {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold
+}   
+
+/* hyperlink style for the site links */
+A.SiteLinkx:link {
+    text-decoration:    none;
+    color: Red;
+}
+
+A.SiteLinkx:visited  {
+    text-decoration:    none;
+    color: Green;
+}
+
+A.SiteLinkx:active   {
+    text-decoration:    none;
+    color: Red;
+}
+
+A.SiteLinkx:hover    {
+    text-decoration:    underline;
+    color: Blue;
+}
+/* text style for the site links (at extreme top-right of header) */
+.SiteLink {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold
+}   
+
+/* hyperlink style for the site links */
+A.SiteLink:link {
+    text-decoration:    none;
+    color:white;
+}
+
+A.SiteLink:visited  {
+    text-decoration:    none;
+    color:#eeeeee;
+}
+
+A.SiteLink:active   {
+    text-decoration:    none;
+    color:#eeeeee;
+}
+
+A.SiteLink:hover    {
+    text-decoration:    underline;
+    color:white;
+}
+
+/* style for separator between site links */
+.Accent
+{
+    color: red;
+    font-weight:    bold;
+}
+
+
+
+/* MODULE-SPECIFIC */
+/* text style for reading messages in Discussion */    
+.Message    {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    font-size: 11px;
+    background-color: #eeeeee
+}   
+
+/* style of item titles by Announcements and events */
+.ItemTitle    {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  11px;
+    font-weight:    bold;
+    color: darkred;
+}
+
+
+
+/* GENERAL */
+/* style for module titles */
+.Head   {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  20px;
+    font-weight:    normal;
+    color: #666644;
+}
+
+/* style of item titles on edit and admin pages */
+.SubHead    {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  11px;
+    font-weight:    bold;
+    color: darkred;
+}
+
+/* module title style used instead of Head for compact rendering by QuickLinks and Signin modules */
+.SubSubHead {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  11px;
+    font-weight:    bold;
+    color: black;
+}
+
+/* text style used for most text rendered by modules */
+.Normal
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 12px    
+}
+
+/* text style used for textboxes in the admin and edit pages, for Nav compatibility */
+.NormalTextBox
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal; 
+    text-align: justify; width: 98%; clip:  rect(   );
+}
+
+.NormalRed
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: red
+}
+
+.NormalBold
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold
+}
+
+/* text style for buttons and link buttons used in the portal admin pages */
+.CommandButton     {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+    
+/* hyperlink style for buttons and link buttons used in the portal admin pages */
+A.CommandButton:link {
+    text-decoration:    underline;
+    color: darkred;
+}
+
+A.CommandButton:visited  {
+    text-decoration:    underline;
+    color: darkred;
+}
+
+A.CommandButton:active   {
+    text-decoration:    underline;
+    color: darkred;
+}
+
+A.CommandButton:hover    {
+    text-decoration:    underline;
+    color: red;
+}
+    
+
+
+
+/* GENERIC */
+H1  {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  20px;
+    font-weight:    normal;
+    color: #666644;
+}
+
+H2  {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  20px;
+    font-weight:    normal;
+    color: #666644;
+}
+
+H3  {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  12px;
+    font-weight:    normal;
+    color: darkred;
+}
+
+H4  {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  12px;
+    font-weight:    normal;
+    color: darkred;
+}
+
+H5, DT  {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  11px;
+    font-weight:    bold;
+    color: darkred;
+}
+
+H6  {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  11px;
+    font-weight:    bold;
+    color: darkred;
+}
+
+TFOOT, THEAD    {
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  12px;
+    color: darkred;
+}
+
+TH  {
+    vertical-align: baseline;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size:  12px;
+    font-weight:    bold;
+    color: darkred;
+}
+
+A:link  {
+    text-decoration:    none;
+    color:  darkred;
+}
+
+A:visited   {
+    text-decoration:    none;
+    color:  darkred;
+}
+
+A:active    {
+    text-decoration:    none;
+    color:  darkred;
+}
+
+A:hover {
+    text-decoration:    underline;
+    color:  red;
+}
+
+SMALL   {
+    font-size:  8px;
+}
+
+BIG {
+    font-size:  14px;
+}
+
+BLOCKQUOTE, PRE {
+    font-family:    Lucida Console, monospace;
+}
+
+
+UL LI   {
+    list-style-type:    square ;
+}
+
+UL LI LI    {
+    list-style-type:    disc;
+}
+
+UL LI LI LI {
+    list-style-type:    circle;
+}
+
+OL LI   {
+    list-style-type:    decimal;
+}
+
+OL OL LI    {
+    list-style-type:    lower-alpha;
+}
+
+OL OL OL LI {
+    list-style-type:    lower-roman;
+}
+
+HR {
+    color: dimgrey;
+    height:1pt;
+    text-align:left
+}
+
+.Input {
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 9pt;
+	width: 99%;
+	border: 1px solid #999999;
+}
+.ddlInput {
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 8pt;
+	width: 100%;
+	border: 1px solid #999999;
+}
+.errorText1 {font-family: Verdana, Tahoma, Arial; font-size: 8pt; color: Red}
+
+/*
+==============================================================================
+Framework Pages Styles Here
+==============================================================================
+*/
+
+/* Frames & borders*/
+.SoftwareInMotionPartFrame {
+	border: 1px solid #009966;
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.SoftwareInMotionPartFrame2{
+	border: 1px solid #ffcc66;
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.SoftwareInMotionPartFrame3 {
+	border: 1px solid #009966;
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 8pt;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.SoftwareInMotionPartFrameAlt {
+	border: #ffffff 1px solid;
+}
+.SoftwareInMotionPartTitle {
+	background-color:#3cb371;font-weight:bold;color:#ffffff;
+	font-family: verdana, tahoma, arial; font-size:8pt;
+}
+.SoftwareInMotionPartTitleAlt {
+	background-color:#ffffff;font-weight:bold;color:#000000;
+	font-family: Verdana, Tahoma, Arial; font-size: 8pt;
+}
+.SoftwareInMotionPartBody {
+	background-color:#FFFBFF; font-family: Verdana, Tahoma, Arial; font-size: 8pt; font-style: normal
+}
+.SoftwareInMotionPartBodyAlt {
+	background-color:#dddddd;
+}
+.SoftwareInMotionPartFieldTitle {
+	color:#3cb371;text-decoration:none;font-family: Verdana, Tahoma, Arial; font-size: 8pt
+}    
+.SoftwareInMotionPartFieldTitleAlt {
+	color:#999999;text-decoration:none;font-family: Verdana, Tahoma, Arial; font-size: 8pt; font-weight: bold;
+	width: 100%;
+}    
+.SoftwareInMotionPartTab {
+	background:#eeeeee;font-family: Verdana, Tahoma, Arial; font-size: 7pt
+
+}
+
+
+/* 	Input Control Styles  */ 
+  
+  /* TextBox */
+.SoftwareInMotionTextbox {
+	color:#3cb371;font-family:verdana, tahoma, arial; font-size:8pt; font-weight:normal;
+	border:1pt #666666 solid;text-align: justify; width: 98%; clip:  rect(   )
+}
+.SoftwareInMotionTextboxDr {
+	color:#3cb371;font-family:verdana, tahoma, arial; font-size:8pt; font-weight:normal;
+	border:1pt #666666 solid;text-align: justify; width: 99%; clip:  rect(   )
+ }
+ .SoftwareInMotionTextboxAlt {
+	color:#666666;font-family:verdana,tahoma,arial; font-size:8pt; font-weight:normal;
+	border:solid #666666 1px; text-decoration:none;
+}
+.SoftwareInMotionTextboxNav {
+	color:#3cb371;font-family:verdana, tahoma, arial; font-size:8pt; font-weight:normal;
+	width:150px;height:auto; border:solid #666666 1px; text-decoration:none;
+}
+.SoftwareInMotionTextboxEdit {
+	color:#333333;font-family:verdana,tahoma,arial; font-size:8pt; font-weight:normal;
+	width:100%;line-height:8pt;text-decoration:none;border:solid #cccccc 1px;
+}
+
+
+  /* Button */
+  
+.SoftwareInMotionButton {
+	color:#000066;font-family:verdana,tahoma,arial; font-size:8pt; font-weight:normal;
+	border:solid #666666 1px; text-decoration:none;
+	width: 152px;
+}
+.SoftwareInMotionButton2
+{
+	BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 8pt; BORDER-LEFT: #666666 1px solid; WIDTH: 155px; COLOR: #ffffff; BORDER-BOTTOM: #666666 1px solid; FONT-FAMILY: verdana,tahoma,arial; HEIGHT: 18px; BACKGROUND-COLOR: teal; TEXT-DECORATION: none
+	}
+
+.SoftwareInMotionButtonAlt {
+	color:#666666;font-family:verdana,tahoma,arial; font-size:8pt; font-weight:normal;
+	border:solid #666666 0px; text-decoration:none;cursor:hand;
+}
+
+/* 	CONTENT STYLES */
+
+.SoftwareInMotionNorm {
+	color:#dddddd; font-family:verdana, tahoma; font-size:8pt;
+}
+.SoftwareInMotionNormHigh {
+	color:#ff0000; font-family:verdana,tahoma; font-size:8pt;
+}
+.SoftwareInMotionNormAlt {
+	color:#999999; font-family:verdana,tahoma; font-size:8pt;
+}
+.SoftwareInMotionTitle {
+	color:#FFFFFF; font-family:verdana, tahoma; font-size:14pt; font-weight:bold;
+}
+.SoftwareInMotionTableHeader {
+	background-color:#999999;color:#ffffff;
+	font-family:verdana,tahoma,arial;font-size:8pt;font-weight:bold;line-height:14pt;
+}
+.SoftwareInMotionTableRow {
+	background-color:white;
+}
+.SoftwareInMotionTableRowAlt {
+	background-color:#eeeeee;
+}
+.SoftwareInMotionTableRowAltx {
+	background-color:#dfffdf;font-family:verdana,tahoma,arial;font-size:7pt;
+}
+.cpTableEdge {
+	background-color:#3cb371;
+}
+.SoftwareInMotionTableSpacer {
+	background-color:#eeeeee;
+}
+.SoftwareInMotionErrorTitle {
+	color:#ff0000; font-family:verdana,tahoma,arial; font-size:10pt; font-weight:bold;line-height:14pt;
+}
+.SoftwareInMotionErrorText {
+	color: Blue; font-family:verdana, tahoma, arial; font-size:8pt; font-weight:normal;
+}
+.SoftwareInMotionTextTitle {
+	color:#FFFFFF; font-family:verdana, tahoma, arial; font-size:10pt; font-weight:bold;line-height:normal;
+}
+
+.SoftwareInMotionTextAll {font-family:  Tw Cen MT, Tahoma, Arial; font-size: 10pt; color: #000000}
+
+/* 	Sub Heading Background */
+
+.SoftwareInMotionSecondaryTabLite {
+  background-color  : #b2d1b2; color:#333333; font-weight: bold; border:1px solid #b2d1b2; padding: 2px 8px 2px 8px; font-family: verdana, Tahoma, Arial ; font-size: 7pt; cursor: default
+}
+.SoftwareInMotionSecondaryTabLite-s {
+  background-color  : #b2d1b2; color:#333333; font-weight: bold; border:1px solid #b2d1b2; padding: 2px 8px 2px 8px; font-family:   Trebuchet MS, Tahoma, Arial ; font-size: 9pt; cursor: default
+}
+.SoftwareInMotionTertiaryTab {
+background-color: #E0ECE0; color:#333333; font-weight:bold; border:1px solid #E0ECE0; padding: 2px 8px 2px 8px; font-family: verdana, Tahoma, Arial ; font-size: 8pt; cursor: default
+}
+.SoftwareInMotionTertiaryTabLite {
+
+background-color:#E0ECE0; color:#333333; font-weight:normal; border:1px solid #E0ECE0 padding: 2px 8px 2px 8px; font-family: verdana, Tahoma, Arial ; font-size: 8pt; cursor: default
+}
+.SoftwareInMotionSecondaryTab { background-color:#b2d1b2; color:#333333; font-weight:bold; border:1px solid #000000; padding: 2px 8px 2px 8px; font-family: verdana, Tahoma, Arial ; font-size: 8pt; cursor: default }
+.SoftwareInMotionSecondaryTab2 { background-color:#ffcc66; color:#333333; font-weight:bold; border:1px solid #ffcc66; padding: 2px 8px 2px 8px; font-family: verdana, Tahoma, Arial ; font-size: 8pt; cursor: default }
+
+.SoftwareInMotionSecondaryTabLite-p {
+  background-image:url(images/bGround.png); background-repeat: repeat;  color:#333333; font-weight: bold; border:1px solid #b2d1b2; padding: 2px 8px 2px 8px; font-family:   Trebuchet MS, Tahoma, Arial ; font-size: 9pt; cursor: default
+}
+.SoftwareInMotionSecondaryTabLite-gd{
+  background-image:url(images/bg2.png); background-repeat: repeat;  color:#ffffff; font-weight: bold; border:1px solid #b2d1b2; padding: 2px 8px 2px 8px; font-family:   Trebuchet MS, Tahoma, Arial ; font-size: 9pt; cursor: default
+}
+/* General*/
+
+.mnuStyle
+{
+	BORDER-RIGHT: #000000 1px solid; 
+	BORDER-TOP: #000000 1px solid; 
+	BORDER-LEFT: #000000 1px solid; 
+	CURSOR:hand; 
+	BORDER-BOTTOM: #000000 1px solid
+	}
+.THband {
+	font-family: Arial, Tahoma, Arial;
+	font-size: 10pt;
+	font-weight: bold;
+	background-image: url(../Images/grad-title.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	color: #ffffff;
+	border: 1px solid #51A2A2;
+	}
+.mnTitleBand
+{
+	background-color:#cccccc;
+	font-family: Arial, Tahoma;
+	font-size: 8pt;
+	font-weight:normal;
+	color: #000000;
+ }
+ .mnTitleBandBig
+{
+	background-color:#cccccc;
+	font-family: Arial, Tahoma;
+	font-size: 10pt;
+	font-weight:bold;
+	color: #ffffff;
+ }
+.BigTitleBar
+{
+	background-image:url(../Images/menu_bk.gif);
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 12px;
+	COLOR: #ffffff; 
+	FONT-FAMILY: arial,helvetica,sanserif; 
+	WHITE-SPACE: nowrap; height:20px;
+	}
+.cBigTitleBar
+{
+	background-image:url(../Images/menu_bk.gif);
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 12px;
+	COLOR: #ffffff; 
+	FONT-FAMILY: arial,helvetica,sanserif; 
+	WHITE-SPACE: nowrap;
+	cursor:hand;
+	}
+.SmallTitleBar
+{
+	background-image:url(../Images/menu_bk.gif);
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 10px; 
+	height:20px;
+	COLOR: #ffffff; 
+	FONT-FAMILY: arial,helvetica,sanserif; 
+	WHITE-SPACE: nowrap;
+	}
+.SoftwareInMotionPartFramex {
+	border: 1px solid #ccccc;
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 8pt;
+	color: #000000;
+}
+.smtextDotted3 {
+	font-family: Arial,Verdana, Tahoma ;
+	font-size: 8pt;
+	font-weight:normal;
+	color:#000000;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color:#000000;
+}
+.smtextDotted4 {
+	font-family: Arial,Verdana, Tahoma ;
+	font-size: 8pt;
+	font-weight:normal;
+	color:#000000;
+}
+.SoftwareInMotionListHeader {
+	background-color:#996600;color:#ffffff;
+	font-family:verdana,tahoma,arial;font-size:8pt;font-weight:bold;line-height:14pt;
+}
+
+.SoftwareInMotionListRowAlt 
+{
+	background-color:#3cb371;
+}
+.SoftwareInMotionRowBg
+ {
+	font-family:verdana,tahoma,arial;font-size:8pt;font-weight: normal;
+	background: #FC9D00; color:#000000;
+	
+}
+
+.modalBackground
+{background-color:Gray;filter:alpha(opacity=70);opacity:0.7;}
+
+.contentSub
+{
+	BORDER-BOTTOM: #d42e12 1px solid; PADDING-BOTTOM: 3px; MARGIN: 2px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; COLOR: #d42e12; FONT-SIZE: 15px; font-family:Trebuchet MS, Tw Cen MT, Tahoma, Arial ; FONT-WEIGHT: bold; PADDING-TOP: 3px;
+	}
+.style1 {
+	COLOR: #ee3224; FONT-WEIGHT: bold; font-family: Trebuchet MS, Tw Cen MT, Tahoma, Arial ; font-size: 9pt; cursor: default
+}
+.sideutil1 {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #fff; MARGIN: 2px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; PADDING-TOP: 3px
+}
+.sideutilContent {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #fff; margin-top:2px; PADDING-RIGHT: 3px; PADDING-TOP: 3px
+}
+
+#contentmgr
+{
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 3px;  PADDING-LEFT: 3px; PADDING-RIGHT: 3px; COLOR: #666666; FONT-SIZE: 10px; PADDING-TOP: 3px;
+	}
+	.Butt1 
+{
+	background :url('Images/Utilities/but1.png'); background-repeat:repeat-x; 
+	color:#000000;font-family: Trebuchet MS, Tw Cen MT,verdana, tahoma, arial; font-size:8pt; font-weight: bold; border:0;
+	
+}
+.Butt1x 
+{
+	background :url('Images/Utilities/but1.png'); background-repeat:repeat-x;  padding: 1px 0px  0px 0px;
+	color:#ee3224;font-family: Trebuchet MS, Tw Cen MT,verdana, tahoma, arial; font-size:8pt; font-weight: bold; border:0;
+	
+}
+.Butt2 
+{
+	background :url('Images/Utilities/but2.png'); background-repeat:repeat-x; 
+	color:#000000;font-family: Trebuchet MS, Tw Cen MT,verdana, tahoma, arial; font-size:8pt; font-weight: bold; border:0;
+	
+}
+
+.errorText1 
+{
+	font-family: Verdana, Tahoma, Arial; font-size: 8pt; color: Red
+	
+	}
+.SoftwareInMotionTableRowAltx {
+	background-color:#eee; font-family:Trebuchet MS, Tw Cen MT, Verdana, Arial; font-size:10pt;
+	font-weight:bold
+}
+.SoftwareInMotionTableRowAlty {
+	background-color:#fff; font-family:Trebuchet MS, Tw Cen MT, Verdana, Arial; font-size:10pt;
+	font-weight:bold
+}
+.stockTdH
+{
+	background-color:#ffff9f; font-family:Trebuchet MS, Tw Cen MT, Verdana, Arial; font-size:10pt;
+	font-weight:bold
+	}
+	
+.stockTdC
+{
+	background-color:#cccc33; color:#ffffff; font-family:Trebuchet MS, Tw Cen MT, Verdana, Arial; font-size:10pt;
+	font-weight: normal;
+	}
+	
+.tbHeader
+{
+	 background-color:#c3de9a; 
+	 vertical-align:middle; font-family: Trebuchet MS, Tw Cen MT, Arial,Georgia, Verdana; font-size:9pt; font-weight:bold;
+	color: #000000; height:12px;
+}
+.SoftwareInMotionTextAll-dg {font-family: Trebuchet MS, Tw Cen MT, Tahoma, Arial; font-size: 10pt; color: #fff; font-weight:bold;
+ }
+ 
+.SoftwareInMotionTextAll {font-family: Trebuchet MS, Tw Cen MT, Tahoma, Arial; font-size: 9pt; color: #666666
+ }
+ 
+ .pathFrame_
+{
+	border: 1px solid #b2d1b2;
+	
+}
+.Input3 {
+	font-family: Trebuchet MS, Tw Cen MT, Tahoma, Arial; font-size: 8pt;
+	width: 95%;
+	border: 1px solid #999999; clip: rect(); color: #333333;
+}
+.ddlInput3 {
+	font-family: Trebuchet MS, Tw Cen MT, Tahoma, Arial; font-size: 8pt;
+	width: 96%;
+	border: 1px solid #999999; clip: rect(); color: #333333;
+}
+.line {
+	BORDER-BOTTOM: #dddddd 1px solid
+}
+.formline1 {
+	BORDER-BOTTOM: #C6CED0 1px solid;  background-color:Transparent; color:#666666; font-weight:  normal; padding: 2px 8px 2px 8px; font-family: Trebuchet MS, Tahoma, Arial ; font-size: 9pt; cursor: default;
+}
+.formline {
+  background-color:#C6CED0; color:#666600; font-weight:  normal; font-family: Trebuchet MS, Tahoma, Arial ; font-size: 9pt; cursor: default;
+}
+
+.xSubHeader
+{
+	background-image:url(images/Utilities/subHeadLine.png); background-repeat: repeat-x;  COLOR: #000000; font-weight: bold; border:1px solid #b2d1b2; padding: 2px 8px 2px 8px; font-family:   Trebuchet MS, Tahoma, Arial ; font-size: 9pt; cursor: default
+	}
+.stockItem
+{
+	background-color:#fff; color:#666; font-family:Trebuchet MS, Tw Cen MT, Verdana, Arial; font-size:8pt;
+	font-weight: normal;
+	}
+
+.stockAlt
+{
+	background-color:#eee; color:#666; font-family:Trebuchet MS, Tw Cen MT, Verdana, Arial; font-size:8pt;
+	font-weight: normal;
+	}
+	
+.stockTextAll 
+{
+  background-color:Transparent;	font-family:Trebuchet MS, Tw Cen MT, Verdana, Arial; font-size:8pt; font-weight:normal;
+ }
+ .stockHeader
+{
+	 background-color:#ccc; 
+	 vertical-align:middle; font-family: Trebuchet MS, Tw Cen MT, Arial,Georgia, Verdana; font-size:9pt; font-weight:normal;
+	color: #000; height:12px;
+}
+
+
+.contentSubPlain
+{
+	 PADDING-BOTTOM: 3px; MARGIN: 2px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; COLOR: #cccccc;  font-family:Trebuchet MS, Tw Cen MT, Tahoma, Arial ; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-TOP: 3px;
+	}
+
+.contentMain1
+{
+	color:#666666; background-color: Transparent; font-weight:  normal; font-family: Trebuchet MS, Tw Cen MT, Tahoma, Arial ; font-size: 9pt; cursor: default;
+	PADDING-BOTTOM: 0.52em; PADDING-LEFT: 3px; PADDING-RIGHT: 3px;
+	}

@@ -1,0 +1,9 @@
+<?php 
+        file_get_contents("https://ebusiness.ensure.com.ng/t/services/domailget?senderMask=$shopname&header=true&key=AIzaSyBIbB7Cv2mXY9LHN4vzEuD513PfvATnX3w&reciveremail=$email&reciveremailCC=&reciveremailBC=&subject=$subject&recivername=$emailName&msg=$body&filepath=");
+       
+        $response = http_get("https://ebusiness.ensure.com.ng/t/services/domailget?senderMask=shopname&header=true&key=AIzaSyBIbB7Cv2mXY9LHN4vzEuD513PfvATnX3w&reciveremail=damola.adeyemi@ensure.com.ng&reciveremailCC=&reciveremailBC=&subject=subject&recivername=$emailName&msg=$body&filepath=")
+        //array("senderMask"=>$shopname), $info);
+
+//print_r($info);
+
+?>

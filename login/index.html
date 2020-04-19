@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="payments">
+<head runat="server">
+    
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ensure</title>
+
+<link rel="stylesheet" media="screen" type="text/css" href='wonderlandcollective/css/style.css' />
+
+
+<link rel="shortcut icon" href='wonderlandcollective/Ensure_Favicon.png'/>
+
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  
+  <script src="wonderlandcollective/js/html5.js"></script>
+<![endif]-->
+<script type='text/javascript' src='wonderlandcollective/js/jquery.jsver=1.11.3.js'></script>
+
+
+    <!-- sweet alert-->
+        <link href="assets/css/sweetalert.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="assets/js/sweetalert.min.js"></script>
+    <!---->
+</head>
+<body ng-controller="MainCtrl as ctrl" class="page page-id-277 page-template page-template-page-selfservice page-template-page-selfservice-php customexternalpage">
+    
+	
+	<div id="header" class="container">
+		<a href='http://ensure.com.ng/' id="logo" class=" center-block  center-block"><svg xmlns="http://www.w3.org/2000/svg" width="188.8" height="96.4" viewBox="0 0 188.8 96.4"><path fill="#3FAB3C" d="M139.9 17.5L114.9 0l-3.8 3.6L137.3 22l25.1 17.5 3.7-3.6-26.2-18.4m-38-5.1l26.2 18.4 3.8-3.6-26.2-18.4M93 21.1l26.2 18.3 3.7-3.6-26.2-18.3m48.7-5.2l26.2 18.4 3.7-3.6-26.2-18.4m9-8.6l-3.8 3.5L180.5 22l3.8-3.6"/><path fill="#2B54A0" d="M180.6 63.9v5.5h-.7v-5.5h-1.8v-.7h4.3v.7m6.4 5.5h-.7v-5.2l-1.7 5.2h-.8l-1.7-5.2v5.2h-.7v-6.2h1.1l1.7 5.2 1.7-5.2h1.1M14.9 96.4c-2.2 0-4.2-.4-6.1-1.1-1.8-.8-3.4-1.9-4.7-3.3-1.3-1.5-2.3-3.2-3.1-5.3-.6-2.2-1-4.6-1-7.3 0-2.6.4-5 1.1-7.1.7-2.1 1.6-3.8 2.9-5.3 1.3-1.5 2.8-2.6 4.5-3.4 1.8-.8 3.7-1.2 5.8-1.2 2.2 0 4.2.4 5.9 1.2 1.8.8 3.3 1.9 4.5 3.3 1.2 1.5 2.2 3.2 2.9 5.3.7 2.1 1 4.5 1 7.1v1.4h-23c.1 1.9.4 3.5.9 4.9.5 1.4 1.2 2.5 2 3.4.8.9 1.8 1.6 2.8 2 1.1.5 2.2.7 3.5.7.9 0 1.8-.1 2.7-.4.9-.3 1.7-.6 2.4-1.1.7-.5 1.3-1.1 1.7-1.8.4-.7.7-1.6.7-2.5H28c-.2 1.7-.7 3.2-1.5 4.5-.8 1.3-1.7 2.4-2.9 3.3-1.2.9-2.5 1.6-4 2-1.3.4-3 .7-4.7.7m8-20.1c-.4-3.1-1.4-5.4-3-6.9-1.5-1.6-3.4-2.3-5.6-2.3-1.1 0-2.1.2-3.1.6-1 .4-1.8 1-2.6 1.7-.6.7-1.3 1.6-1.8 2.8-.5 1.2-.9 2.5-1.1 4.1h17.2zm17.3-8.9c1.3-1.6 2.8-2.9 4.3-3.7 1.5-.8 3.1-1.2 4.8-1.2 6.9 0 10.3 4 10.3 12v21.2h-5.5v-21c0-1.3-.1-2.5-.3-3.4-.2-.9-.5-1.7-1-2.3-.5-.6-1-1-1.8-1.3-.7-.3-1.6-.4-2.6-.4-2.8 0-5.5 1.7-8.3 5.1v23.2h-5.4V63.3h5.4v4.1zm38.2 29c-8.3 0-12.7-3.5-13.1-10.4h5.5c0 3.9 2.6 5.9 7.6 5.9 1.1 0 2.1-.1 3-.4.9-.3 1.6-.6 2.2-1.1.6-.5 1-1 1.3-1.6.3-.6.4-1.3.4-2 0-.8-.1-1.4-.3-1.9-.2-.5-.7-.9-1.3-1.3-.6-.4-1.5-.7-2.7-1.1-1.1-.3-2.7-.8-4.5-1.3-1.8-.5-3.4-.9-4.7-1.4-1.3-.5-2.4-1-3.2-1.7-.8-.7-1.5-1.5-1.9-2.5-.4-1-.6-2.2-.6-3.8 0-1.3.3-2.6.8-3.7s1.3-2.1 2.3-3c1-.8 2.2-1.5 3.6-2s3-.7 4.7-.7c8 0 12.1 3 12.2 9.1h-5.4c-.2-3-2.3-4.5-6.5-4.5-.9 0-1.8.1-2.5.3-.8.2-1.5.5-2 .8-.6.4-1 .8-1.3 1.3-.3.5-.5 1.1-.5 1.8 0 .6.1 1.1.2 1.6.1.4.5.8 1.1 1.1.6.3 1.4.7 2.5 1 1.1.3 2.6.8 4.5 1.3s3.5 1 4.8 1.5c1.4.5 2.5 1.1 3.4 1.8.9.7 1.6 1.6 2 2.6.4 1 .7 2.3.7 3.9 0 1.5-.3 2.8-.9 4.1-.6 1.2-1.4 2.3-2.4 3.3-1.1.9-2.3 1.6-3.8 2.2-1.6.5-3.3.8-5.2.8m38-4.9c-2.7 3.2-5.8 4.9-9.2 4.9-6.9 0-10.3-4-10.3-11.9V63.3h5.5v20.9c0 1.4.1 2.5.3 3.4.2.9.5 1.7 1 2.3.5.6 1 1 1.8 1.3.7.3 1.6.4 2.6.4 3 0 5.8-1.7 8.4-5.2V63.3h5.4v32.3h-5.4v-4.1zm29.2-23c-.8-.3-1.9-.4-3.3-.4s-2.7.4-3.9 1.1c-1.2.8-2.3 1.9-3.3 3.5v22.9h-5.4V63.3h5.4v4.5c2.3-3.5 5-5.3 8-5.3.7 0 1.5.1 2.5.3v5.7zm16.7 27.9c-2.2 0-4.2-.4-6.1-1.1-1.8-.8-3.4-1.9-4.7-3.3-1.3-1.5-2.3-3.2-3-5.3-.7-2.1-1.1-4.5-1.1-7.2 0-2.6.4-5 1.1-7.1.7-2.1 1.7-3.9 2.9-5.3 1.3-1.5 2.8-2.6 4.5-3.4 1.8-.8 3.7-1.2 5.8-1.2 2.2 0 4.2.4 5.9 1.2 1.8.8 3.3 1.9 4.5 3.3 1.2 1.5 2.2 3.2 2.9 5.3.7 2.1 1 4.5 1 7.1v1.4h-23c.1 1.9.4 3.5.9 4.9.5 1.4 1.2 2.5 2 3.4.8.9 1.8 1.6 2.8 2 1.1.5 2.2.7 3.5.7.9 0 1.8-.1 2.7-.4.9-.3 1.7-.6 2.4-1.1.7-.5 1.3-1.1 1.7-1.8.4-.7.7-1.6.7-2.5h5.7c-.2 1.7-.7 3.2-1.5 4.5-.8 1.3-1.7 2.4-2.9 3.3-1.2.9-2.5 1.6-4 2-1.3.3-2.9.6-4.7.6m8-20.1c-.4-3.1-1.4-5.4-3-6.9-1.5-1.6-3.4-2.3-5.6-2.3-1.1 0-2.1.2-3.1.6-1 .4-1.8 1-2.6 1.7-.7.8-1.4 1.7-1.9 2.9s-.9 2.5-1.1 4.1h17.3z"/></svg></a>
+
+       
+		<a href="javascript:void(0)" id="menutoggle" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path id="menu-icon" d="M462 163.5H50v-65h412v65zm0 60H50v65h412v-65zm0 125H50v65h412v-65z"/></svg>MENU</a>
+
+		<ul id="nav" class="pull-right">
+       	<!--
+            menu commented out 
+	        <li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://dev.wonderlandcollective.co.za/ensure/claims/">Claims</a></li>
+			<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-277 current_page_item menu-item-282"><a href="http://dev.wonderlandcollective.co.za/ensure/self-service/">Self Service</a></li>
+			<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://dev.wonderlandcollective.co.za/ensure/contact/">Contact</a></li> 
+        -->
+        </ul>
+		
+		<!--<div class="claim_number">Need to report a claim? <strong><a href="tel:08000367873">08000367873</a></strong></div> -->
+	</div>
+    <!-- END OF HEADER -->
+ 
+
+
+        <!-- START OF PAGE IMAGE HEADER -->
+	<!--<div id="builder">
+        
+		<div class="container custompageheader build-fwheader text-center" style=" background-image:url(images/selfserviceheader.jpg)" data-bg="images/selfserviceheader.jpg">
+			<h1> <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server"> </asp:ContentPlaceHolder></h1>
+			
+		</div>
+	</div>-->
+	<!-- END OF PAGE IMAGE HEADER -->
+
+
+
+<div id="builder" class="">
+
+<div id="underlay"></div>
+
+
+	
+	<div id="normalpage" class="container blogarchive ">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h1><strong>Fleet Manager</strong></h1>
+			</div>
+		</div>
+<form name="paymentForm" method="post" novalidate action=""> 
+		    
+
+       <h2>
+           <a href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A1759%2Ffleet001%2Fgoogle-login-api%2F&client_id=38377875518-re8hho7g5t18ql2omd3jj85ddsmtmngo.apps.googleusercontent.com&scope=email+profile&access_type=online&approval_prompt=auto" class=""><img src="../google-login-api/images/googleSignIn1.png" width="200px"/></a></h2>
+		
+        
+        <div class="row">
+        	
+			<div class="col-md-8  col-md-offset-2   shadow " >
+				<div id="pane1" ng-show="ctrl.myPane1Show"><br/> <!---->
+                
+
+
+                <div class="col-md-6 col-md-offset-3" >
+					<div class="alert ">{{ctrl.errorMsg}}</div>
+				</div>
+                <div class="col-md-6 col-md-offset-3" >
+                	<label > <strong>Policy No:</strong></label>
+                     <div class="form-group input-group">
+                     
+                     <input type="text" ng-model="ctrl.policy"  placeholder="Enter Policy Number" value="{{ctrl.policy}}"  class="form-control">
+                     <span class="input-group-addon alert-danger"></span>
+                    </div>
+                    <span class="btn btn-success" ng-click="ctrl.validate()" ng-disabled="paymentForm.$invalid" >Validate</span>
+               </div> 
+               
+               
+                <div class="col-lg-6 " >
+                	<label > <strong>Account Name:</strong></label>
+                     <div class="form-group input-group">
+                     
+                     <input type="text"   ng-model="ctrl.acct_name" readonly value="{{ctrl.acct_name}}"  class="form-control">
+                      <span class="input-group-addon "></span>
+                    </div>
+                    
+               </div>
+               
+               
+               <div class="col-md-6 " >
+                	<label > <strong>Email Address:</strong></label>
+                     <div class="form-group input-group">
+                     
+                     <input type="email" name="txtEmail"   ng-model="ctrl.acct_email" ng-readonly="ctrl.editAmmt" value="{{ctrl.acct_email}}"  class="form-control">
+                   <span class="input-group-addon "></span>
+                    </div>
+                    <div role="alert">
+                      <span class="error red" style="font-size:13px" ng-show="paymentForm.txtEmail.$error.email">
+                        Not valid email!</span>
+                    </div>
+               </div>
+               
+               
+               <div class="col-md-6 " >
+                	<label > <strong>Phone Number:</strong></label>
+                     <div class="form-group input-group">
+                     
+                     <input type="text"   ng-model="ctrl.acct_phone"  readonly value="{{ctrl.acct_phone}}"  class="form-control">
+                     <span class="input-group-addon "></span>
+                    </div>
+                    
+               </div>
+                          
+               
+              
+                
+                <div class="col-md-6 " >
+                	<label > <strong>Payment Amount:</strong></label>
+                   <!-- <strong><span class="red">*</span> Mobile Number  : </strong>-->
+                     <div class="form-group input-group">
+                     
+                     <input type="number" ng-change="ctrl.updateVals()"  ng-model="ctrl.pay_ammt" ng-readonly="ctrl.editAmmt" min="100" value="{{ctrl.pay_ammt}}"   class="form-control">
+                      <span class="input-group-addon alert-danger"></span>
+                    </div>
+                    
+               </div>
+               
+               <div class="col-md-6 col-md-offset-3" >
+               <div class="checkbox">
+ 					 <label><input  ng-model="ctrl.agree" type="checkbox" value=""> I Agree with Ensure Terms & Agreement</label>
+			   </div>
+                <!-- <p><div class="row"><span class="input-group-addon alert-danger" style=" width:10px; height:40px"></span> Required fields</div></p>-->
+          
+      <p style="text-align:center">Your data is safe with us. </p>
+
+               
+                	 <button type="submit" style="display:none"  ng-click="ctrl.updateVals()" ng-disabled="ctrl.disableSub" class="btn btn-primary">Update</button>
+					 <button type="button" ng-disabled="ctrl.disableSub"  ng-click="ctrl.validtePane1()" class="btn btn-success center-block">Next</button>
+                     <br />
+                    
+               </div>
+             </div>
+             
+             <div id="pane2" ng-show="ctrl.myPane2Show"><br />
+             <div class="alert alert-info col-md-6 col-md-offset-3">
+             <h4>Transaction Notification </h4>
+     [<span class="red">Please verify your details</span>]</div>
+              
+              <div class="col-md-6 col-md-offset-3" >
+                	<label > <strong>Account Name:</strong></label>
+                     <div class="form-group input-group">
+                     
+                     <input type="text"   ng-model="ctrl.acct_name" readonly value="{{ctrl.acct_name}}"  class="form-control">
+                      <span class="input-group-addon "></span>
+                    </div>
+                    
+               </div>
+              
+              
+              
+              
+              <div class="col-md-6 col-md-offset-3" >
+                	<label > <strong>Payment Reference:</strong></label>
+                     <div class="form-group input-group">
+                     
+                     <input type="text"    readonly value="{{ctrl.finalParams['txn_ref']}}"  class="form-control">
+                     <span class="input-group-addon "></span>
+                    </div>
+                    
+               </div>
+             
+             
+             
+             <div class="col-md-6 col-md-offset-3" >
+                	<label > <strong>Payment Amount:</strong></label>
+                   <!-- <strong><span class="red">*</span> Mobile Number  : </strong>-->
+                     <div class="form-group input-group">
+                     
+                     <input type="text"  readonly   value="{{ctrl.pay_ammt}}"   class="form-control">
+                      <span class="input-group-addon "></span>
+                    </div>
+                    
+               </div>
+             
+             
+              <div class="col-md-6 col-md-offset-3" >
+              
+               <button type="button" ng-disabled="ctrl.disableSub"  ng-click="ctrl.mySbubmit()" class=" center-block imgClassPayment"><img src="assets/images/interswitch.jpg" /></button><br />
+              
+               <button type="button" ng-disabled="ctrl.disableSub" ng-click="ctrl.backBtn()" class="btn btn-danger center-block">Back</button>
+                    
+          
+                    
+               </div>
+             
+             
+             
+             </div>
+             
+            </div>
+           
+        </div>
+        
+ </form>       
+  </div>
+
+</div>
+
+<div draggable id="draggable" class="alert alert-success selector widget draggable" style=" position:fixed; display:none;   top:200px; left:100px; width:400px;" >
+
+<b>Final params:<br /></b>
+  <pre>      
+{{ctrl.finalParams}}
+</pre>
+</div>
+<style>
+.imgClassPayment { 
+padding:0px;
+    border: none;
+   /* background-image: url("assets/images/interswitch.jpg") no-repeat;
+    width: 300px;
+    height: 100px;*/
+
+}
+</style>
+
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script type="text/javascript">
+		
+            angular.module('payments', [])
+                .controller('MainCtrl', ['$http', function($http) {
+                    var self = this;
+
+                    self.editAmmt = true;
+                    self.disableSub = true;
+
+                    self.finalParams = {};
+	                self.finalParams['provider'] = "Interswitch";
+					self.INTEGER_REGEXPInteger = new RegExp('^[a-z0-9]+(\.[_a-z0-9]+)*@@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,50})$', 'i');
+					self.INTEGER_REGEXPEmail =/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+					//self.agree = true;
+					self.myPane2Show= false;
+					self.myPane1Show= true;
+
+                    self.validate = function() {
+                        self.errorMsg = '';
+						swal({
+							  title: '',
+							  text: 'Please wait...',
+							  imageUrl: 'assets/images/loading.gif',
+							  animation: true
+							})
+                        
+                        if(self.policy) {
+                            $http.get("https://damola.staging.ggh.uk/portal/p/lookup/"+btoa(JSON.stringify(
+                           { 
+                                    "policy": self.policy 
+                                }))+"/")
+                                .then(
+                                    function(validResp) {
+                                        console.log("https://damola.staging.ggh.uk/portal/p/lookup/"+btoa(JSON.stringify({"policy": self.policy }))+"/")
+										console.log(validResp)
+
+                                        if(validResp.data['error'] === false) {
+                                            var val_payload = validResp.data['payload'];
+	                                        self.policy = val_payload['policy_num'];
+	                                        self.acct_name = val_payload['account_name'];
+	                                        self.pay_ref = val_payload['debit_note_num'];
+	                                        self.pay_ammt = val_payload['debit_amount'];
+											
+											self.acct_email = val_payload['account_email'];
+											self.acct_phone = val_payload['account_phone'];
+                                            
+	                                        self.finalParams['cust_name'] = self.cust_name = val_payload['account_name'];
+                                            self.finalParams['cust_id'] = self.cust_id = val_payload['account_id'];
+                                            // Time-based variable transaction reference to allow the same policy and payment number to be re-used
+											var d = new Date();
+											var ms = d.getMilliseconds();
+											var s = d.getSeconds();
+											var m = d.getMinutes();
+											var h = d.getHours();
+											
+                                            self.finalParams['txn_ref'] = self.txn_ref = val_payload['debit_note_num']+'-'+Date.now()+ms+s+m+h;
+											self.finalParams['txn_ref_old'] = self.txn_ref = val_payload['debit_note_num']+'-'+Date.now()+ms+s+m+h;
+                                            self.finalParams['amount'] = self.amount = (val_payload['debit_amount'] * 100);
+
+                                            self.editAmmt = false;
+											
+											
+                                            self.disableSub = false;
+											
+
+					                        $http.get("https://damola.staging.ggh.uk/portal/p/details/"+btoa(JSON.stringify(
+					                            { 
+					                                "provider": self.finalParams['provider'],
+					        	                    "pay_ref": self.finalParams['txn_ref'],
+						                            "pay_ammt": self.finalParams['amount'].toString()
+					                            }))+"/")
+					                            .then(
+					                                function(confResp) {
+					
+					                                    if(confResp.data['error'] === false) {
+					                                        var con_payload = confResp.data['payload'];
+                                                            self.finalParams['product_id'] = self.product_id = con_payload['product_id'];
+					                                        self.finalParams['pay_item_id'] = self.pay_item_id = con_payload['pay_item_id'];
+					                                        self.finalParams['currency'] = self.currency = con_payload['currency'];
+					                                        self.finalParams['site_name'] = self.site_name = con_payload['site_url'];
+					                                        self.finalParams['site_redirect_url'] = self.site_redirect_url = con_payload['return_url'];
+					                                        self.finalParams['hash'] = self.hash = con_payload['hash'];
+					                                        self.finalParams['local_date_time'] = self.local_date_time = con_payload['timestamp'];
+															
+															//close loading message
+															swal({
+																  title: 'Success!',
+																  text: 'Valid policy number.',
+																  timer: 100
+																})
+																
+																									
+															
+					                                    } else {
+					                                        self.errorMsg = 'Policy "'+self.policy
+					                                            +'" - error '+confResp.data['exit_code']+': '
+					                                            +confResp.data['message'];
+																console.log(self.errorMsg)
+																swal('Error','Invalid policy number', 'error')
+					                                    }
+					                                },
+					                                function(failResp) {
+					                                    console.error('Error looking up provider details');
+														swal('Error','Error looking up provider details', 'error')
+					                                }
+					                            );
+                                        } else {
+                                            self.errorMsg = 'Policy "'+self.policy
+                                                +'" - error '+validResp.data['exit_code']+': '
+                                                +validResp.data['message'];
+												console.log(self.errorMsg)
+												swal('Error','Invalid policy number', 'error')
+                                        }
+                                    },
+                                    function(failResp) {
+										console.log(failResp)
+                                        console.error('Error looking up user in Salesforce');
+										swal('Error','Error looking up user in Salesforce', 'error')
+                                    }
+                                );
+
+                                console.log(self.finalParams);
+                        } else {
+                            self.errorMsg = 'CANNOT!'
+                            swal (self.errorMsg);
+                        }
+						
+                    };
+
+										
+                    self.updateVals = function() {
+                        self.finalParams['amount'] = self.amount = self.pay_ammt * 100;
+
+                        $http.get("https://damola.staging.ggh.uk/portal/p/details/"+btoa(JSON.stringify(
+	                        { 
+	                            "provider": self.finalParams['provider'],
+	        	                "pay_ref": self.finalParams['txn_ref'],
+                                "pay_ammt": self.finalParams['amount']
+	                        }))+"/")
+	                            .then(
+	                                function(updateResp) {
+	
+	                                    if(updateResp.data['error'] === false) {
+	                                        var con_payload = updateResp.data['payload'];
+	                                        self.finalParams['hash'] = self.hash = con_payload['hash'];
+	                                        self.finalParams['local_date_time'] = self.local_date_time = con_payload['timestamp'];
+	                                    } else {
+	                                        self.errorMsg = 'Policy "'+self.policy
+	                                            +'" - error '+updateResp.data['exit_code']+': '
+	                                            +updateResp.data['message'];
+	                                    }
+	                                },
+	                                function(updatefResp) {
+	                                    console.error('Error looking up provider details');
+	                                }
+	                            );
+
+                        console.log(self.pay_ammt);
+                    };
+					
+					
+					
+					self.mySbubmit = function() {
+                        //self.finalParams['amount'] = self.amount = self.pay_ammt * 100;
+						//console.log("My submit begin");
+                        $http.get("https://damola.staging.ggh.uk/portal/p/logTransaction/"+btoa(JSON.stringify(
+	                        {  "policy_num": self.policy,
+	                            "provider": self.finalParams['provider'],
+	        	                "pay_ref": self.finalParams['txn_ref'],
+                                "amount": self.finalParams['amount'],
+								"local_date_time": self.finalParams['local_date_time'],
+								"cust_name": self.finalParams['cust_name'],
+								"cust_id": self.finalParams['cust_id'],
+								"pay_item_id": self.finalParams['pay_item_id'],
+								"currency": self.finalParams['currency'],
+								"email": self.acct_email,
+								"phone": self.acct_phone
+	                        }))+"/")
+							 .then(
+	                            function(SubmitResp) {
+								console.log (SubmitResp.data);
+								console.log ("Payment intiation loged");
+								 
+							
+								  var sub_payload = SubmitResp.data['payload'];
+								  self.finalParams['txn_ref'] = self.txn_ref = self.finalParams['txn_ref_old']+"-"+sub_payload['paymentLogId'];
+                                  self.pay_ref =self.finalParams['txn_ref'] ;
+								  
+								  //re hash variable
+								  
+								   $http.get("https://damola.staging.ggh.uk/portal/p/details/"+btoa(JSON.stringify(
+								   											{ 
+								   												"provider": self.finalParams['provider'],
+								   												"pay_ref": self.finalParams['txn_ref'],
+								   												"pay_ammt": self.finalParams['amount']
+								   											}))+"/")
+								   												.then(
+								   													function(updateResp) {
+								   														console.log(updateResp.data);
+								   														console.log(self.finalParams['txn_ref'])
+								   					
+								   														if(updateResp.data['error'] === false) {
+								   															var con_payload = updateResp.data['payload'];
+								                                                               
+								   															self.finalParams['hash'] = self.hash = con_payload['hash'];
+								   														
+								   															self.finalParams['local_date_time'] = self.local_date_time = con_payload['timestamp'];
+								   															
+								   															console.log(self.finalParams)
+								                                                               console.log(self.txn_ref)
+								   															//submit form 
+                                                                                            swal({
+                                                                                                       title: "Are you sure?",
+                                                                                                       text: "Payment gatway will load in 5 seconds !",
+                                                                                                       type: "warning",
+                                                                                                       showCancelButton: true,
+                                                                                                        timer: 5000,
+                                                                                                       confirmButtonColor: "green",
+                                                                                                       confirmButtonText: "Yes, proceed!",
+                                                                                                       closeOnConfirm: false}, 
+                                                                                                    function(){ 
+                                                                                                       swal("Redirecting...!");
+                                                                                                        setTimeout(document.paymentForm.submit(), 250)
+                                                                                                    });
+                                                                                            
+                                                                                                                                                                                                      
+								                                                                                                                                       
+								                                                              
+								   															
+								   														} else {
+								   															self.errorMsg = 'Policy "'+self.policy
+								   																+'" - error '+updateResp.data['exit_code']+': '
+								   																+updateResp.data['message'];
+								   														}
+								   													},
+								   													function(updatefResp) {
+								   														console.error('Error looking up provider details');
+								   													}
+								   												);
+								   
+								  
+								 
+								
+						        if(SubmitResp.data['error'] === false) {
+	                                      } else {
+	                                        console.log = 'Policy "'+self.policy
+	                                            +'" - error '+SubmitResp.data['exit_code']+': '
+	                                            +SubmitResp.data['message'];
+	                                    }
+	                                },
+	                            function(SbfailResp) {
+	                                    
+	                                }
+	                            );
+
+                      
+                    };
+					
+					
+					
+					self.validtePane1 = function() {
+						//swal (" validation  begin")
+						if ((self.pay_ammt >= 100) && (self.agree === true) && ( self.INTEGER_REGEXPEmail.test(self.acct_email) === true ))
+						{
+							
+							self.myPane2Show = true
+							self.myPane1Show = false
+						}
+						else
+						{ 
+							var msg = "";
+							if((self.pay_ammt >= 500)===false ){msg=msg+":.Payment can't be less than N500 <br/>"}
+							if((self.agree === true)===false ){msg=msg+":.Please Agree with Ensure Terms & Agreement<br/>"}
+							if(( self.INTEGER_REGEXPEmail.test(self.acct_email) === true )===false ){msg=msg+":.Please enter a valid email address<br/>"}
+							console.log(msg)
+							 swal("Oops...","Fail validation test ")
+							 swal ({title: 'Error!',   text: msg,   html: true  })
+							/*swal({
+								  title: 'Error',
+								  type: 'error',
+								  html:"'"+msg+"'",
+								  showCloseButton: true
+								  
+								})*/
+						
+						
+						}
+                        console.log(self.pay_ammt);
+                    };
+					
+					
+					
+					self.backBtn = function() {
+						//swal (" validation  begin")
+						
+							
+							self.myPane2Show = false
+							self.myPane1Show = true
+						
+						
+                        //console.log(self.pay_ammt);
+                    };
+						
+					
+                }]);
+        </script>
+
+	<div id="footer" class="container">
+		<div id="newsletterrow" class="row">
+			<form action="https://ensure.us1.list-manage.com/subscribe/post?u=60a768e9244bdfa7c306ef724&amp;id=2cc52a93f7" method="post" id="newsletter" target="_blank" novalidate>
+				<label for="email">SIGN UP TO OUR NEWSLETTER:</label>
+				<input type="email" id="email" placeholder="Enter your email address">
+				<input type="submit" value="Sign Up">
+			</form>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-7 clearfix">
+				<span class="pull-left footerlogo"><svg xmlns="http://www.w3.org/2000/svg" width="188.8" height="96.4" viewBox="0 0 188.8 96.4">
+    <path fill="#3FAB3C" d="M139.9 17.5L114.9 0l-3.8 3.6L137.3 22l25.1 17.5 3.7-3.6-26.2-18.4m-38-5.1l26.2 18.4 3.8-3.6-26.2-18.4M93 21.1l26.2 18.3 3.7-3.6-26.2-18.3m48.7-5.2l26.2 18.4 3.7-3.6-26.2-18.4m9-8.6l-3.8 3.5L180.5 22l3.8-3.6"></path>
+    <path fill="#2B54A0" d="M180.6 63.9v5.5h-.7v-5.5h-1.8v-.7h4.3v.7m6.4 5.5h-.7v-5.2l-1.7 5.2h-.8l-1.7-5.2v5.2h-.7v-6.2h1.1l1.7 5.2 1.7-5.2h1.1M14.9 96.4c-2.2 0-4.2-.4-6.1-1.1-1.8-.8-3.4-1.9-4.7-3.3-1.3-1.5-2.3-3.2-3.1-5.3-.6-2.2-1-4.6-1-7.3 0-2.6.4-5 1.1-7.1.7-2.1 1.6-3.8 2.9-5.3 1.3-1.5 2.8-2.6 4.5-3.4 1.8-.8 3.7-1.2 5.8-1.2 2.2 0 4.2.4 5.9 1.2 1.8.8 3.3 1.9 4.5 3.3 1.2 1.5 2.2 3.2 2.9 5.3.7 2.1 1 4.5 1 7.1v1.4h-23c.1 1.9.4 3.5.9 4.9.5 1.4 1.2 2.5 2 3.4.8.9 1.8 1.6 2.8 2 1.1.5 2.2.7 3.5.7.9 0 1.8-.1 2.7-.4.9-.3 1.7-.6 2.4-1.1.7-.5 1.3-1.1 1.7-1.8.4-.7.7-1.6.7-2.5H28c-.2 1.7-.7 3.2-1.5 4.5-.8 1.3-1.7 2.4-2.9 3.3-1.2.9-2.5 1.6-4 2-1.3.4-3 .7-4.7.7m8-20.1c-.4-3.1-1.4-5.4-3-6.9-1.5-1.6-3.4-2.3-5.6-2.3-1.1 0-2.1.2-3.1.6-1 .4-1.8 1-2.6 1.7-.6.7-1.3 1.6-1.8 2.8-.5 1.2-.9 2.5-1.1 4.1h17.2zm17.3-8.9c1.3-1.6 2.8-2.9 4.3-3.7 1.5-.8 3.1-1.2 4.8-1.2 6.9 0 10.3 4 10.3 12v21.2h-5.5v-21c0-1.3-.1-2.5-.3-3.4-.2-.9-.5-1.7-1-2.3-.5-.6-1-1-1.8-1.3-.7-.3-1.6-.4-2.6-.4-2.8 0-5.5 1.7-8.3 5.1v23.2h-5.4V63.3h5.4v4.1zm38.2 29c-8.3 0-12.7-3.5-13.1-10.4h5.5c0 3.9 2.6 5.9 7.6 5.9 1.1 0 2.1-.1 3-.4.9-.3 1.6-.6 2.2-1.1.6-.5 1-1 1.3-1.6.3-.6.4-1.3.4-2 0-.8-.1-1.4-.3-1.9-.2-.5-.7-.9-1.3-1.3-.6-.4-1.5-.7-2.7-1.1-1.1-.3-2.7-.8-4.5-1.3-1.8-.5-3.4-.9-4.7-1.4-1.3-.5-2.4-1-3.2-1.7-.8-.7-1.5-1.5-1.9-2.5-.4-1-.6-2.2-.6-3.8 0-1.3.3-2.6.8-3.7s1.3-2.1 2.3-3c1-.8 2.2-1.5 3.6-2s3-.7 4.7-.7c8 0 12.1 3 12.2 9.1h-5.4c-.2-3-2.3-4.5-6.5-4.5-.9 0-1.8.1-2.5.3-.8.2-1.5.5-2 .8-.6.4-1 .8-1.3 1.3-.3.5-.5 1.1-.5 1.8 0 .6.1 1.1.2 1.6.1.4.5.8 1.1 1.1.6.3 1.4.7 2.5 1 1.1.3 2.6.8 4.5 1.3s3.5 1 4.8 1.5c1.4.5 2.5 1.1 3.4 1.8.9.7 1.6 1.6 2 2.6.4 1 .7 2.3.7 3.9 0 1.5-.3 2.8-.9 4.1-.6 1.2-1.4 2.3-2.4 3.3-1.1.9-2.3 1.6-3.8 2.2-1.6.5-3.3.8-5.2.8m38-4.9c-2.7 3.2-5.8 4.9-9.2 4.9-6.9 0-10.3-4-10.3-11.9V63.3h5.5v20.9c0 1.4.1 2.5.3 3.4.2.9.5 1.7 1 2.3.5.6 1 1 1.8 1.3.7.3 1.6.4 2.6.4 3 0 5.8-1.7 8.4-5.2V63.3h5.4v32.3h-5.4v-4.1zm29.2-23c-.8-.3-1.9-.4-3.3-.4s-2.7.4-3.9 1.1c-1.2.8-2.3 1.9-3.3 3.5v22.9h-5.4V63.3h5.4v4.5c2.3-3.5 5-5.3 8-5.3.7 0 1.5.1 2.5.3v5.7zm16.7 27.9c-2.2 0-4.2-.4-6.1-1.1-1.8-.8-3.4-1.9-4.7-3.3-1.3-1.5-2.3-3.2-3-5.3-.7-2.1-1.1-4.5-1.1-7.2 0-2.6.4-5 1.1-7.1.7-2.1 1.7-3.9 2.9-5.3 1.3-1.5 2.8-2.6 4.5-3.4 1.8-.8 3.7-1.2 5.8-1.2 2.2 0 4.2.4 5.9 1.2 1.8.8 3.3 1.9 4.5 3.3 1.2 1.5 2.2 3.2 2.9 5.3.7 2.1 1 4.5 1 7.1v1.4h-23c.1 1.9.4 3.5.9 4.9.5 1.4 1.2 2.5 2 3.4.8.9 1.8 1.6 2.8 2 1.1.5 2.2.7 3.5.7.9 0 1.8-.1 2.7-.4.9-.3 1.7-.6 2.4-1.1.7-.5 1.3-1.1 1.7-1.8.4-.7.7-1.6.7-2.5h5.7c-.2 1.7-.7 3.2-1.5 4.5-.8 1.3-1.7 2.4-2.9 3.3-1.2.9-2.5 1.6-4 2-1.3.3-2.9.6-4.7.6m8-20.1c-.4-3.1-1.4-5.4-3-6.9-1.5-1.6-3.4-2.3-5.6-2.3-1.1 0-2.1.2-3.1.6-1 .4-1.8 1-2.6 1.7-.7.8-1.4 1.7-1.9 2.9s-.9 2.5-1.1 4.1h17.3z"></path>
+</svg>
+</span>
+				<ul id="nav1" class="pull-left linklist list-unstyled"><li id="menu-item-248" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-248"><a href="http://dev.wonderlandcollective.co.za/ensure/product/motor-protection-plan/">Motor</a></li><li id="menu-item-249" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-249"><a href="http://dev.wonderlandcollective.co.za/ensure/product/education-protection-plan/">Education</a></li><li id="menu-item-250" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-250"><a href="http://dev.wonderlandcollective.co.za/ensure/product/home-protection-plan/">Home</a></li></ul>				<ul id="nav2" class="pull-left linklist list-unstyled"><li id="menu-item-251" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-251"><a href="http://dev.wonderlandcollective.co.za/ensure/product/savings-protection-plan/">Savings</a></li><li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-product menu-item-252"><a href="http://dev.wonderlandcollective.co.za/ensure/product/life-protection-plan/">Life</a></li><li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253"><a href="http://dev.wonderlandcollective.co.za/ensure/corporate-products/">Corporate</a></li></ul>				<ul id="nav3" class="pull-left linklist list-unstyled"><li id="menu-item-255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255"><a href="http://dev.wonderlandcollective.co.za/ensure/claims/">Claims</a></li><li id="menu-item-256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-256"><a href="http://dev.wonderlandcollective.co.za/ensure/faqs/">FAQs</a></li><li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-254"><a href="http://dev.wonderlandcollective.co.za/ensure/contact/">Contact</a></li></ul>			</div>
+
+			<div class="col-lg-5">
+				<div class="claim_number"><span>Need to report a claim?</span> <strong>HOTLINE: <a href="tel:08000367873">08000367873</a></strong></div>
+				<div class="social_links pull-right">
+					<a href="http://www.linkedin.com/company/ensure-nigeria"><svg xmlns="http://www.w3.org/2000/svg" width="412" height="412" viewBox="0 0 412 412">
+    <path id="linkedin-circle-icon_1_" d="M206 0C92.2 0 0 92.2 0 206s92.2 206 206 206 206-92.2 206-206S319.8 0 206 0zm-55 305.6h-45.2V159.5H151v146.1zm-22.8-165.3c-14.8 0-26.7-12.1-26.7-27s12-27 26.7-27c14.8 0 26.7 12.1 26.7 27 .1 15-11.9 27-26.7 27zm192.3 165.3h-45v-76.7s-8-32.8-24.6-32.8c-18.1 0-27.6 12.2-27.6 32.8v76.7H180V159.5h43.4v19.7s13-24.1 44-24.1 53.2 18.9 53.2 58.1c-.1 39-.1 92.4-.1 92.4z"></path>
+</svg>
+</a>					<a href="http://www.facebook.com/EnsureNigeria"><svg xmlns="http://www.w3.org/2000/svg" width="412" height="412" viewBox="0 0 412 412">
+    <path id="facebook-circle-icon_1_" d="M206 0C92.2 0 0 92.2 0 206s92.2 206 206 206 206-92.2 206-206S319.8 0 206 0zm61 121.2h-28.8c-10.2 0-12.3 4.2-12.3 14.7v25.4H267l-4 44.6h-37.1v133.2h-53.2V206.4H145v-45.2h27.7v-35.6c0-33.4 17.8-50.8 57.4-50.8h36.8l.1 46.4z"></path>
+</svg>
+</a>					<a href="http://twitter.com/ensureng"><svg xmlns="http://www.w3.org/2000/svg" width="412" height="412" viewBox="0 0 412 412">
+    <path id="twitter-4-icon_1_" d="M206 0C92.2 0 0 92.2 0 206s92.2 206 206 206 206-92.2 206-206S319.8 0 206 0zm103.6 170.5c3 67.2-47.1 142.1-135.8 142.1-27 0-52.1-7.9-73.2-21.5 25.3 3 50.6-4 70.7-19.8-20.9-.4-38.6-14.2-44.6-33.2 7.5 1.4 14.9 1 21.6-.8-23-4.6-38.8-25.3-38.3-47.5 6.4 3.6 13.8 5.7 21.6 6-21.3-14.2-27.3-42.3-14.8-63.8 23.6 28.9 58.8 47.9 98.5 49.9-7-29.9 15.7-58.7 46.5-58.7 13.7 0 26.2 5.8 34.9 15.1 10.9-2.1 21.1-6.1 30.3-11.6-3.6 11.2-11.1 20.5-21 26.4 9.7-1.2 18.9-3.7 27.4-7.5-6.4 9.8-14.5 18.2-23.8 24.9z"></path>
+</svg>
+</a>				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="corp" class="container">
+		<div class="row">
+    
+&copy; Ensure Insurance Plc. 2016. &nbsp;&nbsp;Authorised and Regulated by the National Insurance Commission RIC N0. - 044.
+			<!--© Ensure Insurance Plc. 2016. Designed and developed by <a href="http://www.wonderlandcollective.co.za/" target="_blank">Wonderland Collective</a>.-->
+		</div>
+	</div>
+
+
+<!--
+not avalable any more on the server
+<script type="text/javascript" src="./Self_Service_files/site.js" async="" onload=""></script>
+<script type="text/javascript" src="./Self_Service_files/wp-embed.min.js" async="" onload=""></script>-->
+
+
+
+<link rel="stylesheet" media="screen" type="text/css" href='assets/style.css' />
+<link rel="stylesheet" media="screen" type="text/css" href='css/self-service-style.css' />
+</body>
+</html>
